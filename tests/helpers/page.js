@@ -4,7 +4,10 @@ const sessionFactory = require('../factories/sessionFactory');
 
 class CustomPage {
   static async build() {
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch({
+      headless: true,
+      args: ['--no-sandbox'], // decreases the time of the tests
+    });
     const page = await browser.newPage();
     const customPage = new CustomPage(page);
 
