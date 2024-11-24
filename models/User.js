@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema({
   googleId: String,
-  displayName: String,
+  name: String,
 });
 
 module.exports = mongoose.model('User', userSchema);
