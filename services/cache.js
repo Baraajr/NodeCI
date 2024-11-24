@@ -3,15 +3,15 @@ const mongoose = require('mongoose');
 const redis = require('redis');
 
 const redisUrl = 'redis://127.0.0.1:6379';
-// const client = redis.createClient(redisUrl);
+const client = redis.createClient(redisUrl);
 // promisify the method
-// client.hget = util.promisify(client.hget);
+client.hget = util.promisify(client.hget);
 
 // save the original exec method
 const exec = mongoose.Query.prototype.exec;
 
 mongoose.Query.prototype.cache = function (options = {}) {
-  this.useCache = false; // this should be true in but i did false to disable cache system
+  this.useCache = true;
   this.hashKey = JSON.stringify(options.key || '');
   return this; // chainable
 };
