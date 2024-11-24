@@ -12,9 +12,7 @@ require('./services/passport');
 require('./services/cache');
 
 mongoose
-  .connect(
-    'mongodb+srv://BaraaJR:octavio**1145180@blog.aoqhy.mongodb.net/NodeJs-Blog?retryWrites=true&w=majority&appName=Blog'
-  )
+  .connect(keys.mongoURI)
   .then(() => {
     console.log('database connected');
   })
