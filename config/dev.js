@@ -6,4 +6,6 @@ module.exports = {
     'mongodb+srv://BaraaJR:octavio**1145180@blog.aoqhy.mongodb.net/NodeJs-Blog',
   redisUrl: 'redis://127.0.0.1:6379',
   cookieKey: '123123123', //should be unique
+  accessKeyId: 'AKIAIWSXFHRM7F6Z3NWQ',
+  secretAccessKey: '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',
 };
