@@ -16,12 +16,16 @@ export const handleToken = (token) => async (dispatch) => {
 export const submitBlog = (values, file, history) => async (dispatch) => {
   const uploadConfig = await axios.get('/api/upload');
 
-  await axios.put(uploadConfig.data.url, file, {
-    headers: {
-      'content-type': file.type,
-    },
-  }); // the url is undefined coz i couldn't sign up to aws s3
-  //there will be an error
+  try {
+    await axios.put(uploadConfig.data.url, file, {
+      headers: {
+        'content-type': file.type,
+      },
+    }); // the url is undefined coz i couldn't sign up to aws s3
+    //there will be an error
+  } catch (error) {
+    console.log(error);
+  }
 
   const res = await axios.post('/api/blogs', {
     ...values,
