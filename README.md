@@ -76,7 +76,8 @@ npm test
 ---
 
 ## 📫 Author
-Ahmed Baraa Ali Khattab
-📧 ahmedbaraa009@gmail.com
-🔗 LinkedIn
-🐙 GitHub
+
+**Ahmed Baraa Ali Khattab**  
+📧 [ahmedbaraa009@gmail.com](mailto:ahmedbaraa009@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/ahmed-baraa-b94b7b284)  
+🐙 [GitHub](https://github.com/Baraajr)
